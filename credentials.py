@@ -9,4 +9,9 @@ class User:
         self.last_name = last_name
         self.user_name = user_name
         self.password = password
-        
+
+     def save_user(self):
+		'''
+		Function to save a newly created user instance
+		'''
+		User.users_list.append(self)   
