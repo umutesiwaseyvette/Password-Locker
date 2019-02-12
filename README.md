@@ -32,7 +32,7 @@ Password Locker is a terminal run python application that allows users to store 
 
 ## Contact
 
-* tel:+250788582184
+* Tel:+250788582184
 * Email: rwjpyy@gmail.com
 
 ## License
