@@ -25,15 +25,50 @@ Password Locker is a terminal run python application that allows users to store 
 
 ## Specifications
 
-|Behaviour                   |            Input            	|Output|
-|Display codes for navigation|	In terminal: $./password_locker.py|	Welcome, choose an option: ca-Create Account, li-Log In, ex-Exit|
-Display prompt for creating an account	Enter: ca	Enter your first name, last name and password
-Display prompt for login in	Enter: li	Enter your account name and password
-Display codes for navigation	Successful login	Choose an option: cc - Create Credential, dc - Display Credentials, copy - Copy Credential, ex - exit
-Display prompt for creating a credential	Enter: cc	Enter the site name, your username and password
-Display a list of credentials	Enter: dc	Prints a list of saved credentials
-Display prompt for which credential to copy	Enter: copy	Enter the site name of the credential you wish to copy.
-Exit application	Enter: ex	Exit the current navigation stage
+* The program should ask for user's username and password when ca(create account) is entered:
+
+Input Example: Enter ca
+
+Output Example: What is your username?
+
+Output Example: What is your password?
+
+* The program should authenticate the account by asking the user to login again when cc(create credential) is entered:
+
+Input Example: Enter cc
+
+Output Example: Login to your account. Username?
+
+* The program should create credentials when cc(create credential) is entered:
+
+Input Example: Enter cc
+
+Output Example: Enter the account name
+
+* The program should generate a random 8 characters long password when gp(generate password) is entered:
+
+Input Example: Enter gp
+
+Output Example: Your password is:
+
+* The program should let the user create their own password when cp(create password) is entered:
+
+Input Example: Enter cp
+
+Output Example: Enter your password
+
+* The program should display the credentials when dc(display credentials) is entered:
+
+Input Example: Enter dc
+
+Output Example: Here is a list of all of your credentials...
+
+* The program should end when ex(exit program) is entered:
+
+Input Example: Enter ex
+
+Output Example: Thank you for using Password locker...
+
 
 
 ## SetUp / Installation Requirements
