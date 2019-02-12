@@ -10,37 +10,28 @@ class User:
         self.user_name = user_name
         self.password = password
 
-import unittest # Importing the unittest module
-from user import User # Importing the user class
 
-class TestUser(unittest.TestCase):
 
-    '''
-    Test class that defines test cases for the User class behaviours.
+     # Init method up here
+    def save_user(self):
 
-    Args:
-        unittest.TestCase: TestCase class that helps in creating test cases
-
-    ''' 
-     # Items up here .......
-
-    def setUp(self):
         '''
-        Set up method to run before each test cases.
-        '''
-        self.new_user = User("yvette","umutesiwase","umutesiwaseyvette","yvette") # create contact object
-
-
-    def test_init(self):
-        '''
-        test_init test case to test if the object is initialized properly
+        save_account method saves user objects into user_list
         '''
 
-        self.assertEqual(self.new_user.first_name,"yvette")
-        self.assertEqual(self.new_user.last_name,"umutesiwase")
-        self.assertEqual(self.new_user.user_name,"umutesiwaseyvette")
-        self.assertEqual(self.new_user.password,"yvette")
+        User.user_list.append(self)
+    # delete account
+    def delete_user(self):
+
+        '''
+        delete_user method deletes a saved user from the user_list
+        '''
+
+        User.user_list.remove(self)
 
 
-if __name__ == '__main__':
-    unittest.main()  
+
+
+
+ # create contact objectself.assertEqual(self.new_user.first_name,"yvette")
+       
