@@ -1,5 +1,6 @@
 import unittest # Importing the unittest module
-from user import User # Importing the Account class
+from user import User # Importing the user class
+
 
 class TestUser(unittest.TestCase):
 
@@ -88,49 +89,17 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(found_user.user_name,test_user.user_name)
 
-    @classmethod
-    def find_by_user_name(cls,user_name):
-        '''
-        Method that takes in a user_name  and returns a user that matches that user_name.
-        Args:
-            user_name: user_name to search for
-        Returns :
-            user of person that matches the user_name.
-        '''
-
-        for user in cls.user_list:
-            if user.user_name == user_name:
-                return user
-    
     def test_user_exists(self):
         '''
-        test to check if we can return a Boolean  if we cannot find the user.
+        test to check if we can return a Boolean  if we cannot find the contact.
         '''
 
         self.new_user.save_user()
-        test_user = User() # new contact
-        test_use.save_user("yvette","umutesiwase","umutesiwaseyvette","yvette")
+        test_user = User("yvette","umutesiwase","umutesiwaseyvette","yvette") # new user
+        test_user.save_user()
 
         user_exists = User.user_exist("umutesiwaseyvette")
 
         self.assertTrue(user_exists)
-
-    @classmethod
-    def user_exist(cls,user_name):
-        '''
-        Method that checks if a user exists from the user list.
-        Args:
-            user_name: user_name to search for
-            Boolean: True or false depending if the user exists
-        '''
-        for user in cls.user_list:
-            if user.user_name == user_name:
-                    return True
-
-        return False
-
-       
-
-
 if __name__ == '__main__':
     unittest.main()
