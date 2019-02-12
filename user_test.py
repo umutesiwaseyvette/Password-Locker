@@ -20,7 +20,7 @@ class TestUser(unittest.TestCase):
         '''
         test_init test case to test if the object is initialized properly
         '''
-        self.assertEqual(self.new_user.first_name,"umutesiwase")
+        self.assertEqual(self.new_user.first_name,"yvette")
         self.assertEqual(self.new_user.last_name,"umutesiwase")
         self.assertEqual(self.new_user.user_name,"umutesiwaseyvette")
         self.assertEqual(self.new_user.password,"yvette")
@@ -84,7 +84,7 @@ class TestUser(unittest.TestCase):
         test_user = User("yvette","umutesiwase","umutesiwaseyvette","yvette") # new user
         test_user.save_user()
 
-        found_user = User.find_by_user_name("yvette")
+        found_user = User.find_by_user_name("umutesiwaseyvette")
 
         self.assertEqual(found_user.user_name,test_user.user_name)
 
@@ -111,7 +111,7 @@ class TestUser(unittest.TestCase):
         test_user = User() # new contact
         test_use.save_user("yvette","umutesiwase","umutesiwaseyvette","yvette")
 
-        user_exists = User.user_exist("yvette")
+        user_exists = User.user_exist("umutesiwaseyvette")
 
         self.assertTrue(user_exists)
 

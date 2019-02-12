@@ -29,9 +29,25 @@ class User:
 
         User.user_list.remove(self)
 
+    @classmethod
+    def find_by_user_name(cls,user_name):
+        '''
+        Method that takes in a user_name and returns a user that matches that user.
+
+        Args:
+            user_name: user_name to search for
+        Returns :
+            Contact of person that matches the number.
+        '''
+
+        for user in cls.user_list:
+            if user.user_name == user_name:
+                return user
 
 
 
 
- # create contact objectself.assertEqual(self.new_user.first_name,"yvette")
+
+
+
        
