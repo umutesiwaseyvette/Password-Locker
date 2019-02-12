@@ -1,56 +1,26 @@
-class User:
-    """
-    Class that generates new instances of contacts User.
-    """
-    user_list = [] #Empty user list
-
-    def __init__(self,first_name,last_name,user_name,password):
-
-        self.first_name = first_name
-        self.last_name = last_name
-        self.user_name = user_name
-        self.password = password
-
-	def create_user(first_name,last_name,user_name,password):
-    '''
-    Function to create a new user
-    '''
-    new_user = User(first_name,last_name,user_name,password)
-    return new_user
-
-    def save_use(user):
-    """
-    Function to save user
-    """
-    user.save_user()
-
+import random
 class Credential:
     """
-    class that generates new instances
-    """    
-    credentials_list = []    
+    Class that generates new instances of user's credentials
+    """
 
-    def __init__(self,user_name,site_name,account_name,password):
-		'''
-		Method to define the properties for each user object will hold.
-		'''
+    credential_list=[]
 
-		# instance variables
-		self.user_name = user_name
-		self.site_name = site_name
-		self.account_name = account_name
-		self.password = password
+    def __init__(self,view_password,account,login,password):
+        self.view_password = view_password
+        self.account = account
+        self.login = login
+        self.password = password
+        
+    def save_credential(self):
+        """
+        save_credential method saves credential objects into the credential_list
+        """
+        Credential.credential_list.append(self)
 
-	def save_credentials(self):
-		'''
-		Function to save a newly created user instance
-		'''
-		# global users_list
-		Credential.credentials_list.append(self)
-
-	def generate_password(size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
-		'''
-		Function to generate an 8 character password for a credential
-		'''
-		gen_pass=''.join(random.choice(char) for _ in range(size))
-		return gen_pass
+    @classmethod
+    def display_credentials(cls):
+        """
+        display_credentials method that returns the credential list
+        """
+        return cls.credential_list

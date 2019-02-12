@@ -1,6 +1,6 @@
 class User:
     """
-    Class that generates new instances of contacts User.
+    Class that generates new instances of  User.
     """
     user_list = [] #Empty user list
     def __init__(self,first_name,last_name,user_name,password):
