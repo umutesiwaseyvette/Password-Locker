@@ -26,12 +26,9 @@ Password Locker is a terminal run python application that allows users to store 
 ## SetUp / Installation Requirements
 
 * python3.6
-* To run this program
-
-* run this command lines in your terminal: https://github.com/umutesiwaseyvette/Password-Locker
-
 * chmod +x run.py
 * ./run.py
+* run this command lines in your terminal: https://github.com/umutesiwaseyvette/Password-Locker
 
 ## Contact
 
