@@ -2,13 +2,13 @@ class User:
     """
     Class that generates new instances of  User.
     """
-    user_list = [] #Empty user list
+    user_list = [] 
     def __init__(self,user_name,password):
 
         self.user_name = user_name
         self.password = password
 
-     # Init method up here
+     
     def save_user(self):
 
         '''

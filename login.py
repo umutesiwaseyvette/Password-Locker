@@ -69,7 +69,7 @@ def main():
             print("*"*20)
             pass_word = input()
 
-            save_user_account(create_user_account(user_name,pass_word))# create and save new account.
+            save_user_account(create_user_account(user_name,pass_word))
 
             print("\n")
             print(f"New Account **{user_name}** created.\n")
