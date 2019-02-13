@@ -63,6 +63,12 @@ Input Example: Enter dc
 
 Output Example: Here is a list of all of your credentials...
 
+* The program should let the user delete credentials when rc(remove credentials) is entered:
+
+Input Example: Enter rc
+
+Output Example: Enter the account name you want to delete
+
 * The program should end when ex(exit program) is entered:
 
 Input Example: Enter ex

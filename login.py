@@ -28,6 +28,12 @@ def save_credentials(credential):
     """
     credential.save_credential()
 
+def del_credential(account):
+    '''
+    Function to delete a credential
+    '''
+    Credential.credential_list.remove()   
+
 def check_existing_users(characters):
     """
     Function that checks if a user exists with those characters and retuen a boolean
@@ -48,7 +54,7 @@ def main():
     while True:
         print("\nUse these short codes below:")
         print("-" * 30)
-        print("\n ca - create an account, cc - create credentials, gp - generate password, cp - create own password, ex - exit password locker, dc - display credentials")
+        print("\n ca - create an account, cc - create credentials, gp - generate password, cp - create own password, dc - display credentials, rc - delete credentials, ex - exit password locker")
         short_code = input().lower()
 
         if short_code == 'ca':
@@ -129,6 +135,19 @@ def main():
                     print(f"\nAccount: {credential.account}\nLogin Name: {credential.login}\nAccount Password: {credential.password}")
             else:
                 print("\n You don't seem to have any credentials saved yet")
+
+        elif short_code == 'rc':
+            print("Enter the account name you want to delete")
+
+            del_account = input()
+            if check_existing_users(del_account):
+                search_del_credential = save_credentials(del_account)
+                del_credential(search_del_credential)
+                         
+                print(f"Deleted credentials of {del_account}")
+                        
+            else:
+                print("That credential does not exist")
 
         elif short_code == 'ex':
             print("-"*50)
