@@ -32,19 +32,25 @@ def del_credential(account):
     '''
     Function to delete a credential
     '''
-    Credential.credential_list.remove()   
+    account.del_credential()  
 
 def check_existing_users(characters):
     """
     Function that checks if a user exists with those characters and retuen a boolean
     """
-    return User.user_exists(characters)
+    return User.user_exist(characters)
 
 def display_credentials():
      """
      Function that returns the credentials list
      """
      return Credential.display_credentials()
+
+def find_credentials(account_name):
+    '''
+    Funtion that finds a credentials object and returns it
+    '''
+    return Credential.find_by_acc_name(account_name)
 
 def main():
     print("Hello! Welcome to the Password Locker. What is your name?")
@@ -141,7 +147,8 @@ def main():
 
             del_account = input()
             if check_existing_users(del_account):
-                search_del_credential = save_credentials(del_account)
+                
+                search_del_credential = find_credentials(del_account)
                 del_credential(search_del_credential)
                          
                 print(f"Deleted credentials of {del_account}")
